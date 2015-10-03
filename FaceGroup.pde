@@ -26,7 +26,7 @@ public class FaceGroup extends BasicFeature implements GroupProtocol
   }
 
   protected void addShape(String id, PShape s) {
-    shape.addChild(s); //<>//
+    shape.addChild(s);
     shape.addName(id, s);    
   }
   
@@ -38,15 +38,18 @@ public class FaceGroup extends BasicFeature implements GroupProtocol
       @see        FeaturedProtocol
   */
   public void add(FeatureProtocol f) {
-    addShape(f.getID(), f.getShape()); //<>//
+    addShape(f.getID(), f.getShape());
   }
   
   public void replaceShape(String id, PShape s) {
-    remove(id); //<>//
+    remove(id);
     addShape(id,s);
   }
 
-  public void remove(String id) { //<>//
+  public void remove(String id) {
     shape.removeChild(getIndex(id));
   }
-} // FaceGroup //<>// //<>//
+  public void rotate(float r){
+    shape.rotate(r);
+  }
+} // FaceGroup //<>//
