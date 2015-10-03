@@ -5,7 +5,11 @@ public enum Action
     closeEye   (0),
     openEye    (1),
     openMouth  (2),
-    closeMouth (3);
+    closeMouth (3),
+    FaceLeft   (4),
+    FaceRight  (5),
+    brow       (6),
+    browUp     (7);
 
   private final int value;
   
@@ -53,7 +57,9 @@ public enum FeatureID
   LeftEye   (2),  
   RightEye  (3),
   Mouth     (4),
-  Tongue    (5);
+  Tongue    (5),
+  Face      (6),
+  Brow      (7);
   
   private final int id;
   
